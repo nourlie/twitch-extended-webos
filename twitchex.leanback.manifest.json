@@ -1,0 +1,13 @@
+{
+  "id": "org.webosbrew.twitchex",
+  "version": "1.0.0",
+  "type": "web",
+  "title": "Twitch Extended",
+  "iconUri": "https://github.com/nourlie/twitch-extended-webos/blob/master/assets/app/largeIcon.png",
+  "sourceUrl": "https://github.com/nourlie/twitch-extended-webos/",
+  "rootRequired": false,
+  "ipkUrl": "ipks/org.webosbrew.twitchex_1.0.0_all.ipk",
+  "ipkHash": {
+    "sha256": "de4e3d96281c5f0eda6c6b8d35ca2a8ea36cc5330fadf53244e453415b565fea"
+  }
+}
