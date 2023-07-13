@@ -24,9 +24,9 @@
   "author": "Nourlie",
   "license": "GPL-3.0",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/nourlie/twitch-extended-webos/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/nourlie/twitch-extended-webos",
   "devDependencies": {
     "@babel/core": "^7.16.7",
     "@babel/plugin-transform-runtime": "^7.16.8",
