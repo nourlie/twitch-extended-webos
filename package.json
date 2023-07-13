@@ -1,0 +1,59 @@
+{
+  "name": "twitch-webos",
+  "version": "1.0.0",
+  "description": "Twitch app with bttv,7tv,ffz emotes and chat settings",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "package": "ares-package ./dist/app -o ipks",
+    "manifest": "node tools/gen-manifest.js twitchex.leanback.manifest.json",
+    "version": "node tools/sync-version.js",
+    "launch": "ares-launch org.webosbrew.twitchex",
+    "install": "ares-install ./ipks/org.webosbrew.twitchex_%npm_package_version%_all.ipk",
+    "build-package": "webpack && ares-package ./dist/app -o ipks",
+    "build-package-install-run": "webpack && ares-package ./dist/app -o ipks && ares-install ./ipks/org.webosbrew.twitchex_%npm_package_version%_all.ipk && ares-launch org.webosbrew.twitchex"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "twitch",
+    "webos"
+  ],
+  "author": "Nourlie",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.16.8",
+    "@babel/preset-env": "^7.16.8",
+    "@webosose/ares-cli": "^2.2.0",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-polyfill-corejs3": "^0.5.0",
+    "babel-plugin-polyfill-regenerator": "^0.3.0",
+    "copy-webpack-plugin": "^10.2.0",
+    "css-loader": "^6.5.1",
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.7",
+    "prettier": "^2.5.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.16.7",
+    "@mkody/twitch-emoticons": "^2.7.1",
+    "axios": "^1.4.0",
+    "core-js-pure": "^3.20.2",
+    "regenerator-runtime": "^0.13.9",
+    "tiny-sha256": "^1.0.2",
+    "twitch-chat-emotes": "^0.4.2",
+    "whatwg-fetch": "^3.6.2"
+  }
+}

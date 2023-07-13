@@ -1,0 +1,14 @@
+{
+  "id": "org.webosbrew.twitchex",
+  "version": "1.0.0",
+  "vendor": "My Company",
+  "type": "web",
+  "main": "index.html",
+  "title": "Twitch Extended",
+  "icon": "icon.png",
+  "largeIcon": "largeIcon.png",
+  "iconColor": "#000000",
+  "checkUpdateOnLaunch": false,
+  "supportQuickStart": true,
+  "supportGIP": true
+}
