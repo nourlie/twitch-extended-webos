@@ -1,4 +1,4 @@
-# twitch-webos
+# twitch-extended-webos
 
 Twitch App with extended functionalities
 
