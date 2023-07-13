@@ -2,7 +2,7 @@
 
 Twitch App with extended functionalities
 
-![Configuration Screen](hhttps://github.com/nourlie/twitch-extended-webos/blob/master/screenshots/tw1.png?raw=true)
+![Configuration Screen](https://github.com/nourlie/twitch-extended-webos/blob/master/screenshots/tw1.png?raw=true)
 ![Emotes example in chat](https://github.com/nourlie/twitch-extended-webos/blob/master/screenshots/tw2.png?raw=true)
 
 ## Features
