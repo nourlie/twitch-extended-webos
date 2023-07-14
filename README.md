@@ -18,9 +18,7 @@ Configuration screen can be opened by pressing 🟩 GREEN button on the remote.
 
 - Use [webOS Homebrew Channel](https://github.com/webosbrew/webos-homebrew-channel) - app is published in official webosbrew repo
 - Use [Device Manager app](https://github.com/webosbrew/dev-manager-desktop)
-- Use official webOS/webOS OSE SDK: `ares-install org.webosbrew.twitchex...ipk` (for webOS SDK configuration
-  see below)
-
+- Use official webOS/webOS OSE SDK: `ares-install org.webosbrew.twitchex...ipk`
 ## Building and launch
 
 ```sh
