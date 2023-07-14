@@ -12,6 +12,7 @@ let locationObserver = null;
 let isChatLoaded = false;
 let chatAside = null;
 let channelName = null;
+let isFullScreen = false;
 
 function observer() {
   if (locationObserver) {
@@ -55,10 +56,39 @@ export const updateChatWidth = () => {
   let videoSection = document.getElementsByTagName("section");
 
   if (aside[0] && videoSection[0]) {
-    let chatConfigWidth = configRead("chatWidth");
-    aside[0].style.width = chatConfigWidth + "vw";
-    videoSection[0].style.width = 100 - chatConfigWidth + "vw";
+    if (
+      window.screen.width === parseInt(getComputedStyle(videoSection[0]).width)
+    ) {
+      isFullScreen = true;
+    }
+
+    let videoContainer = videoSection[0].querySelectorAll(
+      '[class^="ScCoreButton-sc-"]'
+    );
+
+    let fullScreenButton = videoContainer[videoContainer.length - 1];
+
+    if (fullScreenButton) {
+      fullScreenButton.addEventListener("click", (event) => {
+        isFullScreen = !isFullScreen;
+        updateVideoWidth(videoSection[0], aside[0]);
+      });
+      updateVideoWidth(videoSection[0], aside[0]);
+    }
   }
+};
+
+const updateVideoWidth = (videoSection, aside) => {
+  let chatConfigWidth = configRead("chatWidth");
+
+  videoSection.style.width = isFullScreen
+    ? "100vw"
+    : 100 - chatConfigWidth + "vw";
+
+  aside.style.width = chatConfigWidth + "vw";
+  aside.style.transform = isFullScreen
+    ? `translateX(${chatConfigWidth}vw)`
+    : "none";
 };
 
 export const updateChatJoinBtn = () => {
@@ -144,6 +174,7 @@ async function locationChanged() {
     console.log("Non chat location. Skipping chat add. Path:" + pathname);
     channelName = null;
     chatAside = null;
+    isFullScreen = false;
     return;
   } else if (!isChatLoaded) {
     readChat();

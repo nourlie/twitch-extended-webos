@@ -1,12 +1,12 @@
 {
   "name": "twitch-webos",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Twitch app with bttv,7tv,ffz emotes and chat settings",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
     "package": "ares-package ./dist/app -o ipks",
-    "manifest": "node tools/gen-manifest.js twitchex.leanback.manifest.json",
+    "manifest": "node tools/gen-manifest.js twitchex.manifest.json",
     "version": "node tools/sync-version.js",
     "launch": "ares-launch org.webosbrew.twitchex",
     "install": "ares-install ./ipks/org.webosbrew.twitchex_%npm_package_version%_all.ipk",
